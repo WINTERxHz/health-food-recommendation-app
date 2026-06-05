@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "734434735459",
+    "project_id": "healthy-food-app-12d5f",
+    "storage_bucket": "healthy-food-app-12d5f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734434735459:android:5b75e40119022b2f860f56",
+        "android_client_info": {
+          "package_name": "com.example.appfoodh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "734434735459-l6a7re9gu5chd3osucq49caeghheg6ot.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.appfoodh",
+            "certificate_hash": "05d696fc7503a6e88364ae7ad58ce7183b7e8a8a"
+          }
+        },
+        {
+          "client_id": "734434735459-kfr3gv9n2lporu43ho4fc4chgu9ku559.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBV6ggRtGGz5rjxjOT4-aJaGzurJdGVGCs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "734434735459-kfr3gv9n2lporu43ho4fc4chgu9ku559.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "734434735459-chn7gd2skmj6thfvglfbhta55lu51lbr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.appfoodh"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,49 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── Helper functions ──────────────────────────────────
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return request.auth.uid == uid;
+    }
+
+    function isAdmin() {
+      return request.auth.token.admin == true;
+    }
+
+    // ── users/{uid} ───────────────────────────────────────
+    // User อ่าน/เขียนได้เฉพาะ document ของตัวเอง
+    // Admin อ่านได้ทุก user
+    match /users/{uid} {
+      allow read: if isSignedIn() && (isOwner(uid) || isAdmin());
+      allow write: if isSignedIn() && isOwner(uid);
+
+      // foodLog subcollection
+      match /foodLog/{logId} {
+        allow read, write: if isSignedIn() && isOwner(uid);
+      }
+
+      // waterLog subcollection
+      match /waterLog/{logId} {
+        allow read, write: if isSignedIn() && isOwner(uid);
+      }
+
+      // exerciseLog subcollection
+      match /exerciseLog/{logId} {
+        allow read, write: if isSignedIn() && isOwner(uid);
+      }
+    }
+
+    // ── foods collection ──────────────────────────────────
+    // User ทุกคนอ่านได้ แต่เขียน/แก้/ลบได้เฉพาะ Admin
+    match /foods/{foodId} {
+      allow read: if isSignedIn();
+      allow create, update, delete: if isSignedIn() && isAdmin();
+    }
+
+  }
+}

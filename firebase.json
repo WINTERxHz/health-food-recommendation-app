@@ -1,0 +1,45 @@
+{
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "healthy-food-app-12d5f",
+          "appId": "1:734434735459:android:5b75e40119022b2f860f56",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "healthy-food-app-12d5f",
+          "configurations": {
+            "android": "1:734434735459:android:5b75e40119022b2f860f56",
+            "ios": "1:734434735459:ios:e0329e9a139e78c1860f56",
+            "macos": "1:734434735459:ios:e0329e9a139e78c1860f56",
+            "web": "1:734434735459:web:d2e4c133a335935b860f56",
+            "windows": "1:734434735459:web:b369e0f541a8511c860f56"
+          }
+        }
+      }
+    }
+  },
+  "functions": [
+    {
+      "codebase": "default",
+      "disallowLegacyRuntimeConfig": true,
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
+      ],
+      "source": "functions"
+    }
+  ]
+}

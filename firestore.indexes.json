@@ -1,0 +1,21 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "waterLog",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "dateKey", "order": "ASCENDING" },
+        { "fieldPath": "loggedAt", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "exerciseLog",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "dateKey", "order": "ASCENDING" },
+        { "fieldPath": "loggedAt", "order": "ASCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}
